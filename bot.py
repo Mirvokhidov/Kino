@@ -291,9 +291,16 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ============================================================
 async def add_movie_file(update: Update, context: ContextTypes.DEFAULT_TYPE):
     msg = update.message
-    context.user_data["movie_msg_id"] = msg.forward_from_message_id if msg.forward_from_message_id else msg.message_id
+    
+    # Yangi v22.8 formatiga moslashtirilgan qism:
+    if msg.forward_origin and hasattr(msg.forward_origin, 'message_id'):
+        context.user_data["movie_msg_id"] = msg.forward_origin.message_id
+    else:
+        context.user_data["movie_msg_id"] = msg.message_id
+        
     await msg.reply_text("✅ Xabar qabul qilindi!\n📝 Kino *nomini* kiriting:", parse_mode="Markdown")
     return ADD_MOVIE_TITLE
+
 
 async def add_movie_title(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data["movie_title"] = update.message.text
