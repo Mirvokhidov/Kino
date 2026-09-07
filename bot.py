@@ -392,8 +392,10 @@ def main():
     app = Application.builder().token(BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
-    app.add_handler(CallbackQueryHandler(button_handler, pattern="^(?!add_movie$|delete_movie$|broadcast$|add_ad_channel$|remove_ad_channel$)"))
     
+    # TO'G'RILANGAN QATOR:
+    app.add_handler(CallbackQueryHandler(button_handler, pattern="^(stats|admin_panel|ad_channels_menu|list_movies|settings|check_sub_.*)$"))
+
     app.add_handler(ConversationHandler(
         entry_points=[CallbackQueryHandler(button_handler, pattern="^add_movie$")],
         states={
