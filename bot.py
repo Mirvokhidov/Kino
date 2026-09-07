@@ -26,11 +26,11 @@ from telegram.ext import (
 # ============================================================
 # ⚙️ SOZLAMALAR
 # ============================================================
-BOT_TOKEN       = "YOUR_BOT_TOKEN"
-ADMIN_IDS       = [123456789]
-OPEN_CHANNEL    = "@ochiq_kanal_username"
-PRIVATE_CHANNEL = -1001234567890
-BOT_USERNAME    = "your_bot_username"
+BOT_TOKEN       = "7187501385:AAGMuCSXaz_JYlOJRTIzX-unoskGlzXl_NE"
+ADMIN_IDS       = [5061870104]
+OPEN_CHANNEL    = "@tafakkur_b"
+PRIVATE_CHANNEL = -1002220410072
+BOT_USERNAME    = "o66iy_bot"
 DATA_FILE       = "movies.json"
 
 # Majburiy obuna: nechta kino so'rovdan keyin ko'rsatilsin
