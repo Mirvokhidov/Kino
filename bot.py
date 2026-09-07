@@ -28,7 +28,7 @@ warnings.filterwarnings("ignore", category=PTBUserWarning)
 # ============================================================
 # ⚙️ SOZLAMALAR
 # ============================================================
-BOT_TOKEN       = "5610040264:AAHZmFcB8Yrkry2DPxPMI8-p2MvgcCYbsnI"
+BOT_TOKEN       = "5610040264:AAHZmFcB8Yrkry2DPxPMI8-p2MvgcCYbsnl"
 ADMIN_IDS       = [5061870104]
 OPEN_CHANNEL    = "@YASHIRIN_EHTIROSLI_HIKOYALAR"
 PRIVATE_CHANNEL = -1002220410072
