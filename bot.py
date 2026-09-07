@@ -123,7 +123,6 @@ async def check_subscriptions(context: ContextTypes.DEFAULT_TYPE, user_id: int) 
 
     return not_subscribed
 
-
 def build_subscribe_keyboard(not_subscribed: list, movie_id: str) -> InlineKeyboardMarkup:
     buttons = []
     for ch in not_subscribed:
