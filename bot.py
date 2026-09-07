@@ -1,13 +1,11 @@
 """
-🎬 Telegram Kino Bot — v2.0
-Yangiliklar:
-  - Majburiy obuna kanallari (har 2 kino so'rovdan keyin)
-  - Admin panel orqali reklama kanallarini boshqarish
+🎬 Telegram Kino Bot — v2.0 (Render Webhook uchun to'g'rilangan)
 """
 
 import logging
 import json
 import os
+import warnings
 from telegram import (
     Update,
     InlineKeyboardButton,
@@ -22,6 +20,10 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )
+from telegram.ext.warnings import PTBUserWarning
+
+# Keraksiz sariq eslatmalarni (Warning) terminaldan yashirish
+warnings.filterwarnings("ignore", category=PTBUserWarning)
 
 # ============================================================
 # ⚙️ SOZLAMALAR
@@ -377,7 +379,6 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         kb = [[InlineKeyboardButton("🔙 Orqaga", callback_data="admin_panel")]]
         await query.edit_message_text(text, reply_markup=InlineKeyboardMarkup(kb), parse_mode="Markdown")
-
 
 # ============================================================
 # Conversation Handler Functions
