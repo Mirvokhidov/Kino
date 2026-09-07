@@ -20,7 +20,7 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )
-from telegram.ext.warnings import PTBUserWarning
+from telegram.warnings import PTBUserWarning  # <--- Xato shu yerda to'g'rilandi
 
 # Keraksiz sariq eslatmalarni (Warning) terminaldan yashirish
 warnings.filterwarnings("ignore", category=PTBUserWarning)
@@ -587,3 +587,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
