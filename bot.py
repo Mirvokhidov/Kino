@@ -28,7 +28,7 @@ from telegram.ext import (
 # ============================================================
 BOT_TOKEN       = "7187501385:AAGMuCSXaz_JYlOJRTIzX-unoskGlzXl_NE"
 ADMIN_IDS       = [5061870104]
-OPEN_CHANNEL    = "@tafakkur_b"
+OPEN_CHANNEL    = "@YASHIRIN_EHTIROSLI_HIKOYALAR"
 PRIVATE_CHANNEL = -1002220410072
 BOT_USERNAME    = "o66iy_bot"
 DATA_FILE       = "movies.json"
